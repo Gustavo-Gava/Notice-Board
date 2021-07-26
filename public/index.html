@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="../../assets/images/icon.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <title>Notice Board</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="./assets/images/board.png" alt="Notice Board Icon">
+            <h2>Notice Board</h2>
+        </header>
+
+        <div class="new-post">
+            <h2 onclick="showModal()">Create a new post</h2>
+        </div>
+
+        <div class="line"></div>
+
+        <h2>Posts</h2>
+        <div class="posts" id="posts">
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal hidden">
+        <div class="modal-content">
+            <h2>New Post</h2>
+            <input id="title" type="text" placeholder="Title" maxlength="30">
+            <textarea id="description" placeholder="Description" maxlength="500"></textarea>
+            <div>
+                <button type="submit" onclick="hideModal()">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+                <button type="submit" onclick="newPost()">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/scripts/script.js"></script>
+
+</body>
+
+</html>
